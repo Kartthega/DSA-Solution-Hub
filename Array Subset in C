@@ -1,0 +1,40 @@
+//to check Array subset in C
+
+#include<stdio.h>
+
+void arrsubset(int *arr1,int *arr2,int n,int m){
+int found=0;
+  for(int i=0;i<n;i++){
+    for(int j=0;j<m;j++){
+      if(arr2[j]==arr1[i]){
+        found=1;
+        printf("Yes");
+  }
+ }
+}
+if(!found){
+  printf("No");
+ }
+}
+   
+int main()
+{
+  int n,m;
+  printf("Enter length of Array 1 and 2 :");
+  scanf("%d %d",&n,&m);
+
+  int arr1[n],arr2[m];
+  printf("Enter elements of array1:");
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr1[i]);
+}
+  printf("Enter elements of array2:");
+  for(int i=0;i<m;i++){
+    scanf("%d",&arr2[i]);
+}
+
+arrsubset(arr1,arr2,n,m);
+
+return 0;
+
+}
