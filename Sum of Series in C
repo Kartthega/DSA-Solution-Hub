@@ -1,0 +1,22 @@
+// To find sum of series (SOS) in C
+
+#include<stdio.h>
+
+void sos(int n){
+  int sum=0;
+  for(int i=0;i<n;i++){
+    sum=sum+i;
+}
+printf("The Sum of Series:%d",sum);
+}
+
+int main()
+{
+int n;
+printf("Enter range value:");
+scanf("%d",&n);
+
+sos(n);
+
+return 0;
+}
