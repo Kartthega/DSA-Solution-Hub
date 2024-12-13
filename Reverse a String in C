@@ -1,0 +1,27 @@
+// To reverse a given string (C)
+
+#include<stdio.h>
+#include<string.h>
+
+void revstr(char const *str){
+  char revstr[100];
+  char h=strlen(str);
+
+  for(int i=0;i<h;i++){
+    revstr[i]=str[h-1-i];
+}
+  printf("%s",revstr);
+}
+
+int main()
+{
+  char str[100];
+  printf("Enter String value:");
+  scanf("%s",str);
+
+  revstr(str);
+
+  return 0;
+
+  }
+  
