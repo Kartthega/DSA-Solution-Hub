@@ -1,0 +1,34 @@
+// To search in an Array
+
+#include<stdio.h>
+
+void arrsearch(int *arr,int target,int n){
+   for(int i=0;i<n;i++){
+     if(arr[i]==target){
+       printf("%d",i);
+       return;
+ }
+}
+printf("-1");
+}
+
+int main()
+{
+  int n,target;
+  printf("Enter Array length and target element:");
+  scanf("%d %d",&n,&target);
+
+  int arr[n];
+  printf("Enter Array elements");
+  for(int i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+}
+
+arrsearch(arr,target,n);
+
+return 0;
+
+}
+
+
+
