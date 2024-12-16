@@ -1,0 +1,40 @@
+//Maximum and Minimum element in C
+
+#include<stdio.h>
+
+void minormax(int *arr,int n){
+int max=-9999;
+int min=9999;
+
+for(int i=0;i<n;i++){
+ if(arr[i]>max){
+  max=arr[i];
+ }
+}
+for(int i=0;i<n;i++){
+ if(arr[i]<min){
+   min=arr[i];
+ }
+}
+
+printf("MAX:%d \n MIN:%d",max,min);
+
+}
+
+int main(){
+
+int n;
+printf("Enter the array element:");
+scanf("%d",&n);
+
+int arr[n];
+printf("Enter array elements one by one:");
+for(int i=0;i<n;i++){
+  scanf("%d",&arr[i]);
+}
+
+minormax(arr,n);
+
+return 0;
+
+}
