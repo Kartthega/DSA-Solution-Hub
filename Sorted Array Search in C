@@ -1,0 +1,38 @@
+//Sorted Array Search in C
+
+#include<stdio.h>
+
+void sortedsearch(int*arr,int n,int k){
+int found=0;
+  for(int i=0;i<n;i++){
+    if(arr[i]==k){
+      found=1;
+      printf("true");
+ }
+}
+
+if(!found){
+printf("False");
+ }
+}
+
+int main(){
+int n;
+printf("Enter array length:");
+scanf("%d",&n);
+
+int k;
+printf("Enter Key value to check in array:");
+scanf("%d",&k);
+
+int arr[n];
+printf("Enter Array Elements:");
+for(int i=0;i<n;i++){
+  scanf("%d",&arr[i]);
+}
+
+sortedsearch(arr,k,n);
+
+return 0;
+
+}
