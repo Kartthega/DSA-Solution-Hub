@@ -1,0 +1,25 @@
+//Print 1 to N without loop
+
+#include<stdio.h>
+
+void usenoloop(int current,int n){
+  if(current>n){
+    return;
+}
+
+printf("%d\t",current);
+usenoloop(current+1,n);
+
+}
+
+int main(){
+
+int n;
+printf("Enter Range Value:");
+scanf("%d",&n);
+
+usenoloop(1,n);
+
+return 0;
+
+}
