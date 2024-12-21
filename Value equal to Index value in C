@@ -1,0 +1,30 @@
+//Value equal to Index value in C
+
+#include<stdio.h>
+
+void valueequalindex(int *arr,int n){
+for(int i=1;i<=n;i++){
+ if(arr[i]==i){
+ printf("%d",i);
+    
+   }
+ }
+}
+
+int main(){
+
+int n;
+printf("enter the array size:");
+scanf("%d",&n);
+
+int arr[n];
+for(int i=1;i<=n;i++){
+printf("enter the elements:");
+scanf("%d",&arr[i]);
+}
+
+valueequalindex(arr,n);
+
+return 0;
+
+}
