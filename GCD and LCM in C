@@ -1,0 +1,24 @@
+//To find GCD and LCM in C
+#include<stdio.h>
+
+int gcd(int a,int b){
+  while(b!=0){
+    int temp=b;
+    b=a%b;
+    a=temp;
+  }
+}
+
+int lcm(int a,int b){
+  return(a*b)/gcd(a,b);
+ }
+
+int main(){
+int a,b;
+printf("Enter element a & b:");
+scanf("%d %d",&a,&b);
+
+printf("LCM:%d GCD:%d",lcm(a,b),gcd(a,b));
+
+return 0;
+}
