@@ -1,0 +1,33 @@
+\\String reversal in Java
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        Stack<Character>s=new Stack<>();
+        for(char ch:A.toCharArray()){
+            s.push(ch);
+        }
+        StringBuilder str= new StringBuilder();
+        while(!s.isEmpty()){
+            str.append(s.pop());
+        }
+        if(str.toString().equals(A)){
+            System.out.println("Yes");
+        }
+        else{
+            System.out.println("No");
+        }
+        
+        
+        
+    }
+}
+
+
+
