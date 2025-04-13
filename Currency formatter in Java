@@ -1,0 +1,31 @@
+\\Currency formatter in Java
+
+import java.util.*;
+import java.text.*;
+
+public class Solution {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+        
+        NumberFormat usformat=NumberFormat.getCurrencyInstance(Locale.US);
+        String usformatted=usformat.format(payment);
+        
+        Locale indialocale=new Locale("en","IN");
+        NumberFormat indiaformat=NumberFormat.getCurrencyInstance(indialocale);
+        String indiaformatted=indiaformat.format(payment);
+        
+        NumberFormat chinaformat=NumberFormat.getCurrencyInstance(Locale.CHINA);
+        String chinaformatted=chinaformat.format(payment);
+        
+        NumberFormat franceformat=NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        String franceformatted=franceformat.format(payment);
+        
+        System.out.println("US: " + usformatted);
+        System.out.println("India: " + indiaformatted);
+        System.out.println("China: " + chinaformatted);
+        System.out.println("France: " + franceformatted);
+    }
+}
